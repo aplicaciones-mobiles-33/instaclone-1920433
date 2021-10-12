@@ -1,0 +1,42 @@
+{
+    "usuario": {
+            "nombre": "maxelsolovino", 
+            "seguidores": 4389308, 
+            "siguiendo": 3, 
+            "posts": 12,
+            "bio": "soy adoptado pero mi famila me ama",
+            "avatar": "avatar.jpg"
+  
+    },
+    "publicaciones": [
+    
+        {
+          "id": 1, 
+          "usuario": "ruffles",
+          "imagenPost": "../assets/images/feed/feed1.png",
+          "avatarUsuario": "../assets/images/avatar.jpg",
+          "descripcionPost": "hello hello helloo"
+        }, 
+        {
+          "id": 2, 
+          "usuario": "max",
+          "imagenPost": "../assets/images/feed/feed2.png",
+          "avatarUsuario": "../assets/images/avatar.jpg",
+          "descripcionPost": "holaaaa"
+        },
+        {
+          "id": 3, 
+          "usuario": "oreo",
+          "imagenPost": "../assets/images/feed/feed3.png",
+          "avatarUsuario": "../assets/images/avatar.jpg",
+          "descripcionPost": "la pura vida <3"
+        },
+        {
+          "id": 4, 
+          "usuario": "corgimaya",
+          "imagenPost": "../assets/images/feed/feed1.png",
+          "avatarUsuario": "../assets/images/avatar.jpg",
+          "descripcionPost": "<3  <3 <3 <3 "
+        }
+      ]
+}

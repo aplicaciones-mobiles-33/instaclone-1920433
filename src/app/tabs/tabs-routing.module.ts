@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
 
+
 const routes: Routes = [
   {
     path: 'tabs',
@@ -23,6 +24,10 @@ const routes: Routes = [
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
+      }, 
+      {
+        path: 'publicacion/:publicacionId',//publicacion/:id
+        loadChildren: () => import('../publicacion/publicacion.module').then(m =>m.PublicacionComponentModule)
       }
     ]
   },

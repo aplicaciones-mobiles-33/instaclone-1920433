@@ -1,0 +1,9 @@
+<ion-grid>
+  <ion-row>
+    <ion-col *ngFor="let publicacion of publicacionesArreglo" size="4">
+      <a [routerLink]="['/tabs/publicacion', publicacion.id]">
+        <img src="{{publicacion.imagen}}" alt="{{publicacion.id}}">
+      </a>
+    </ion-col>
+  </ion-row>
+</ion-grid>
