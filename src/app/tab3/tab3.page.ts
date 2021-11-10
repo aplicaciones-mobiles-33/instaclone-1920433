@@ -1,19 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss']
 })
-export class Tab3Page {
+export class Tab3Page implements OnInit {
+  
+  @Input() nombreUsuario: String = '';
+  constructor() { }
 
-  usuario: String =  "ruffles";
-  seguidores: number = 243423;
-  publicaciones: number = 12;
-  siguiendo: number = 32;
-  nombre: "Ruffles";
-  descripcion: String = "hola, mundo!";
+ 
 
-  constructor() {}
+  ngOnInit() {
+    
+  }
 
 }
