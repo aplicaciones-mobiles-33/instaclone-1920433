@@ -4,6 +4,14 @@
 
 export const environment = {
   production: false
+  firebaseConfig : {
+    apiKey: "AIzaSyCJ5LRONaHbCCHYmwFt-fYtYL1NbpYQGYI",
+    authDomain: "insta-clone-app-1fbe3.firebaseapp.com",
+    projectId: "insta-clone-app-1fbe3",
+    storageBucket: "insta-clone-app-1fbe3.appspot.com",
+    messagingSenderId: "798118144050",
+    appId: "1:798118144050:web:899c1e6c8d401052e2f42b"
+  }
 };
 
 /*

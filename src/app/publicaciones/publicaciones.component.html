@@ -1,8 +1,9 @@
+<h3>grid de usuario</h3>
 <ion-grid>
   <ion-row>
-    <ion-col *ngFor="let publicacion of publicacionesArreglo" size="4">
-      <a [routerLink]="['/tabs/publicacion', publicacion.id]">
-        <img src="{{publicacion.imagen}}" alt="{{publicacion.id}}">
+    <ion-col *ngFor="let publicacion of publicacionesPorUsuario" size="4">
+      <a [routerLink]="['tabs/p', publicacion.key]" >
+        <img src="{{publicacion.imagenPost}}" alt="{{publicacion.id}}">
       </a>
     </ion-col>
   </ion-row>

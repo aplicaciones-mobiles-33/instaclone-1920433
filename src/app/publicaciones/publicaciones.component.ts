@@ -1,10 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { PublicacionRoutingModule } from '../publicacion/publicacion-routing.module';
 
+
+
+import { FirebaseDbService } from '../firebase-db.service';
+
 export interface Publicaciones{
   imagen: String;
   id: number;
 }
+
 @Component({
   selector: 'app-publicaciones',
   templateUrl: './publicaciones.component.html',
@@ -12,24 +17,20 @@ export interface Publicaciones{
 })
 export class PublicacionesComponent implements OnInit {
   
-  constructor() { }
-  
-  ngOnInit() {}
-  
-  
-  publicacionesArreglo: Publicaciones[] = [
-    {
-      imagen: '../assets/images/Post 1.jpg',
-      id: 1
-    },
-    {
-      imagen: '../assets/images/Post 2.png',
-      id: 3
-    },
-    {
-      imagen: '../assets/images/Post 3.png',
-      id: 2
-    }
-  ]
-  
+  constructor(private db: FirebaseDbService) { }
+
+   publicaciones = [];
+
+   obtenerPublicaciones(): void {
+     this.db.getPublicaciones().subscribe(
+       res => {
+         console.log(res);
+         this.publicaciones = res;
+       }
+     )
+   }
+
+  ngOnInit() {
+    this.obtenerPublicaciones();
+  }
 }

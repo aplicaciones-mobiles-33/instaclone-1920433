@@ -1,24 +1,32 @@
-<p>
-  publicacion works!
-</p>
-<ion-card>
-  <ion-card-header>
-    <ion-grid>
-      <ion-row>
-        <ion-column size="2">
-          <img src="" alt="">
-        </ion-column>
-        <ion-column size="9">
-          Ruffles
-        </ion-column>
-        <ion-column size="1">
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-button (click)="volver()">Volver</ion-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 
-        </ion-column>
-      </ion-row>
-    </ion-grid>
-  </ion-card-header>
-  <ion-card-content>
-    <p>post aqui</p>
-    <img src="" alt=""> 
-  </ion-card-content>
-</ion-card>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-column size="2">
+            {{usuario}}
+            <!--<img src="{{detallePublicacion.avatarUsuario}}" alt="" height="20px">-->
+          </ion-column>
+          <ion-column size="9">
+          
+          </ion-column>
+          <ion-column size="1">
+  
+          </ion-column>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{descripcionPost}}</p>
+      <img src="{{urlImagen}}" alt=""> 
+    </ion-card-content>
+  </ion-card>
+</ion-content>
