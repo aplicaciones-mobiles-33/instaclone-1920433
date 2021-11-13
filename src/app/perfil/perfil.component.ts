@@ -22,6 +22,7 @@ export class PerfilComponent implements OnInit {
 
   publicaciones= [];//test
 
+
   guardarCambios() {
     if(this.nuevoUsuario) {
       let params = {
@@ -32,12 +33,15 @@ export class PerfilComponent implements OnInit {
       });
     }
 
+
     if(this.nuevaPresentacion) {
       let paramsPresentacion = {
         bio: this.nuevaPresentacion
       }
       this.db.updateNombreUsuario(paramsPresentacion).subscribe(res => {console.log(res)});
-    }  
+    }
+    
+     
 
     // this.db.updateNombreUsuario(this.nuevaPresentacion).subscribe(res => { console.log(res); })
   }
@@ -64,6 +68,7 @@ export class PerfilComponent implements OnInit {
     })
   }
    
+
   obtenerPublicaciones() :void {
   //  this.db.getPublicaciones().subscribe(res => {
   //    console.log(res);
@@ -76,8 +81,12 @@ export class PerfilComponent implements OnInit {
 
   ngOnInit() {
     this.obtenerPerfil();
+
     //this.obtenerPublicaciones();
+
     //this.obtenerPublicacionesUsuario();
+
+
   }
 
 }
